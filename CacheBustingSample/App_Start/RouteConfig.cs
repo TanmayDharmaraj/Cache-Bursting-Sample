@@ -13,11 +13,13 @@ namespace CacheBustingSample
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.LowercaseUrls = true;
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+               name: "SPA-Fallback",
+               url: "{*url}",
+               defaults: new { controller = "Home", action = "Index" }
+           );
         }
     }
 }

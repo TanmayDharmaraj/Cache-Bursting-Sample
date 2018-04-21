@@ -4,16 +4,23 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using CacheBustingSample.Models;
 
 namespace CacheBustingSample.Controllers
 {
-    [Authorize]
-    public class ValuesController : ApiController
+    [RoutePrefix("api/todo")]
+    public class TodoController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        // GET api/todos
+        public IEnumerable<TodoModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<TodoModel> model = new List<TodoModel>();
+            model.Add(new TodoModel()
+            {
+                done = false,
+                todoText = "First Value"
+            });
+            return model;
         }
 
         // GET api/values/5

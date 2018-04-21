@@ -1,0 +1,13 @@
+{
+  "js/app.config.js": "js/app-c4f9ca278f.config.js",
+  "js/app.constants.js": "js/app-c18c79905b.constants.js",
+  "js/app.interceptor.js": "js/app-bef15bb798.interceptor.js",
+  "js/app.js": "js/app-ff1b78ff8b.js",
+  "js/data/data.context.js": "js/data/data-a9f7d4c8ff.context.js",
+  "js/data/data.module.js": "js/data/data-681f051f64.module.js",
+  "js/data/repositories/abstract.repository.js": "js/data/repositories/abstract-5049112946.repository.js",
+  "js/data/repositories/todo.repository.js": "js/data/repositories/todo-7e8305f87a.repository.js",
+  "js/modules/home/home.component.js": "js/modules/home/home-c784623573.component.js",
+  "js/modules/home/home.module.js": "js/modules/home/home-9e25ee7fde.module.js",
+  "js/modules/home/home.state.js": "js/modules/home/home-3099986cfd.state.js"
+}
