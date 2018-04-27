@@ -19,8 +19,7 @@ namespace CacheBustingSample.Attributes
                     Dictionary<string, string> rev = JsonConvert.DeserializeObject<Dictionary<string, string>>(sr.ReadToEnd());
                     string revedFile = rev.Where(s => path.Contains(s.Key)).Select(g => g.Value).FirstOrDefault();
                     string actualPath = "/Scripts/dist/" + revedFile;
-                    return actualPath;
-                    //HttpRuntime.Cache.Insert(path, actualPath);
+                    HttpRuntime.Cache.Insert(path, actualPath);
                 }
             }
             return HttpRuntime.Cache[path] as string;
